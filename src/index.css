@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: qb;
+  src: url("./assets/fonts/qb-one-extra-bold.ttf") format("truetype");
+}
+.qb {
+  font-family: qb;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.jelly {
+  --jelly-color: #ccb804;
+  /* --jelly-color-dark: #e6b004;
+  --jelly-color-darker: #cca003;
+  --jelly-shadow: rgba(0, 0, 0, 0.2);
+  --jelly-shadow-dark: rgba(0, 0, 0, 0.3);
+  --jelly-shadow-darker: rgba(0, 0, 0, 0.4); */
+
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.jelly.animate::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(
+    circle at 10% 40%,
+    var(--jelly-color),
+    #c7a51f,
+    var(--jelly-color)
+  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem;
+  z-index: -1;
+  opacity: 0.5;
+  animation: jelly infinite ease-in-out 4s alternate;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+    border-top-left-radius: 0.9rem;
+    border-bottom-right-radius: 0.9rem;
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+    border-top-right-radius: 0.9rem;
+    border-bottom-left-radius: 0.9rem;
+    opacity: 0.38;
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+    opacity: 0.35;
+  }
+}
+
+.bg-jelly {
+  background: #ffe101;
+}
+.text-jelly {
+  color: #ffe101;
+}
