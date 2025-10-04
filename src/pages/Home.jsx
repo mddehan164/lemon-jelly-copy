@@ -59,10 +59,10 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="w-full h-screen pt-44 relative overflow-hidden text-white px-16"
+      className="w-full h-screen pt-28 lg:pt-44 relative overflow-hidden text-white px-16"
     >
-      <div className="overflow-hidden">
-        <h1 className="text-center text-8xl uppercase qb text-jelly scale-y-115">
+      <div className="">
+        <h1 className="text-center text-[2.8rem] lg:text-8xl uppercase qb text-jelly scale-y-115">
           {text1.map((ch, idx) => {
             // check if character is "O" (or maybe also 'o', depending on case)
             if (ch === "O") {
@@ -71,7 +71,7 @@ export default function Home() {
                   key={idx}
                   src="src/assets/lemon.webp"
                   alt="lemon"
-                  className="inline-block w-[4.8rem] -mt-5 object-fill scale-y-[0.9] chImg"
+                  className="inline-block w-[2.3rem] lg:w-[4.8rem] -mt-2 lg:-mt-5 object-fill lg:scale-y-[0.9] chImg"
                 />
               );
             } else {
@@ -87,18 +87,18 @@ export default function Home() {
           <Splitter text={"MEDIA"} cls={"ch3"} />
         </h1>
 
-        <h1 className="text-center text-8xl uppercase qb mt-14 scale-y-115">
+        <h1 className="text-center text-[2.5rem] lg:text-8xl uppercase qb mt-5 lg:mt-14 scale-y-115">
           <Splitter text={"THINK."} cls={"ch4"} />{" "}
           <Splitter text={"CREATE."} cls={"ch5"} />
         </h1>
-        <h1 className="text-center text-8xl uppercase qb mt-10 scale-y-115">
+        <h1 className="text-center text-[2.5rem] lg:text-8xl uppercase qb mt-2 lg:mt-10 scale-y-115">
           <Splitter text={"INSPIRE"} cls={"ch5"} />
         </h1>
-        <p className="text-center text-lg mt-20 font-medium subTitle">
+        <p className="text-center text-sm lg:text-lg mt-10 lg:mt-20 font-medium subTitle">
           Lemon Jelly is an <strong>independent brand-building</strong> creative
           agency. We live on the story side of marketing
         </p>
-        <div className="w-full flex justify-center mt-10 btn1">
+        <div className="w-full flex justify-center mt-5 lg:mt-10 btn1">
           <SvgBtn title="Contact Us" link={"#contact-us"} />
         </div>
       </div>

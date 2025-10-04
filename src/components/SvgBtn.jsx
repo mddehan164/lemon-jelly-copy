@@ -1,4 +1,5 @@
 import { SquareArrowUpRight } from "lucide-react";
+import SvgShape from "./SvgShape";
 
 export default function SvgBtn({
   title = "Get in Touch",
@@ -6,18 +7,17 @@ export default function SvgBtn({
   link,
 }) {
   return (
-    <a href={link}>
+    <a href={link} className="inline-block w-40 lg:w-48">
+      {/* wrapper to control max width */}
       <svg
-        width="200"
-        height="60"
         viewBox="0 0 200 60"
         xmlns="http://www.w3.org/2000/svg"
-        className="cursor-pointer group relative"
+        className="w-full h-auto cursor-pointer group relative"
       >
         <path
           d="M0,0 H180 L200,20 L200,60 H20 L0,40 Z"
           stroke="#FFEE0D"
-          fill="#000" // initial bg
+          fill="#000"
           strokeWidth="3"
           className={`${
             effect ? "group-hover:fill-[#FFEE0D]" : "fill-[#FFEE0D]"
@@ -37,6 +37,14 @@ export default function SvgBtn({
             effect ? "group-hover:fill-[#000]" : "fill-[#000]"
           } transition-colors duration-700`}
         />
+        <SquareArrowUpRight
+          size={30}
+          x={155}
+          y={15}
+          className={`${
+            effect ? "group-hover:stroke-[#FFEE0D]" : "stroke-[#FFEE0D]"
+          } transition-colors duration-700`}
+        />
         <text
           x="38%"
           y="50%"
@@ -49,14 +57,6 @@ export default function SvgBtn({
         >
           {title}
         </text>
-        <SquareArrowUpRight
-          size={30}
-          x={155}
-          y={15}
-          className={`${
-            effect ? "group-hover:stroke-[#FFEE0D]" : "stroke-[#FFEE0D]"
-          } transition-colors duration-700`}
-        />
       </svg>
     </a>
   );

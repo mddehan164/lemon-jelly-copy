@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@tailwind utilities;
 
 @font-face {
   font-family: qb;
@@ -87,4 +88,10 @@ html {
 }
 .text-jelly {
   color: #ffe101;
+}
+
+.blending {
+  mix-blend-mode: difference;
+  backdrop-filter: grayscale(1) contrast(100);
+  /* optionally, set a background-color so there is something to blend */
 }

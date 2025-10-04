@@ -1,4 +1,13 @@
-export default function JellyBtn({ id, name, link, activeId, setActiveId }) {
+import SvgShape from "./SvgShape";
+
+export default function JellyBtn({
+  id = 0,
+  name,
+  link,
+  activeId,
+  setActiveId,
+  cls,
+}) {
   const isActive = id === activeId;
 
   const handleClick = () => {
@@ -6,11 +15,14 @@ export default function JellyBtn({ id, name, link, activeId, setActiveId }) {
   };
 
   return (
-    <button
-      className={`jelly ${isActive ? "animate" : ""}`}
+    <a
+      href={link}
+      className={`jelly ${
+        isActive ? "animate" : ""
+      } items-center justify-center ${cls} text-center`}
       onClick={handleClick}
     >
-      <a href={link}>{name}</a>
-    </button>
+      <button>{name}</button>
+    </a>
   );
 }
