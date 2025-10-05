@@ -35,7 +35,7 @@ export default function Navbar({ click }) {
           />
         ))}
 
-        <div className="lg:hidden w-44 h-10 flex justify-between items-center">
+        <div className="lg:hidden w-44 h-10 flex justify-between items-center gap-3">
           <SvgShape effect={true} link={"#contact-us"} />
 
           <JellyBtn

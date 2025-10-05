@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import OurWorks from "./pages/OurWorks";
 
 export default function App() {
   const [open, setOpen] = useState(false);
@@ -97,6 +98,7 @@ export default function App() {
         <Navbar click={toggleMenu} />
         <Home />
         <Services />
+        <OurWorks />
       </>
     </div>
   );

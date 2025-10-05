@@ -5,13 +5,14 @@ export default function SvgShape({
   Icon = SquareArrowUpRight,
   link,
   cls,
+  fill = "fill-[#FFE000]",
 }) {
   return (
     <a href={link} className={`${cls} cursor-pointer  `}>
       <svg
         viewBox="0 0 200 60"
         xmlns="http://www.w3.org/2000/svg"
-        className="w-28 h-auto cursor-pointer group relative"
+        className="w-full h-auto cursor-pointer group relative"
       >
         <defs>
           <linearGradient id="gradient3" x1="0%" x2="100%" y1="0%" y2="0%">
@@ -24,15 +25,15 @@ export default function SvgShape({
           d="M140,5 L140,38 L157,55 L195,55 L195,22 L178,5 Z"
           fill="url(#gradient3)"
           className={`${
-            effect ? "group-hover:fill-[#000]" : "fill-[#000]"
-          } transition-colors duration-700`}
+            effect ? "group-hover:fill-[#000]" : fill
+          } transition-colors duration-700 stroke-5 stroke-white`}
         />
         <Icon
-          size={30}
+          size={27}
           x={155}
           y={15}
           className={`${
-            effect ? "group-hover:stroke-[#FFEE0D]" : "stroke-[#FFEE0D]"
+            effect ? "group-hover:stroke-[#000]" : "stroke-[#000]"
           } transition-colors duration-700`}
         />
       </svg>

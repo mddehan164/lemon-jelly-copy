@@ -59,7 +59,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="w-full h-screen pt-28 lg:pt-44 relative overflow-hidden text-white px-16"
+      className="w-full min-h-screen pt-28 lg:pt-44 relative overflow-hidden text-white p-16"
     >
       <div className="">
         <h1 className="text-center text-[2.8rem] lg:text-8xl uppercase qb text-jelly scale-y-115">

@@ -22,7 +22,7 @@ export default function JellyBtn({
       } items-center justify-center ${cls} text-center`}
       onClick={handleClick}
     >
-      <button>{name}</button>
+      <button className="cursor-pointer">{name}</button>
     </a>
   );
 }
