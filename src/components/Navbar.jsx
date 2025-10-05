@@ -14,11 +14,11 @@ const items = [
 export default function Navbar({ click }) {
   const [activeId, setActiveId] = useState(1);
   return (
-    <nav className="w-full h-14 lg:h-20 flex items-center justify-center lg:justify-between px-5 lg:px-24 bg-[rgba(245,244,244,0.05)] backdrop-blur-sm fixed top-4 lg:top-8 z-40">
+    <nav className="w-full h-14 lg:h-20 flex items-center justify-center lg:justify-between px-5 lg:px-24 fixed top-4 lg:top-8 z-40">
       <div className="logo w-[10%] hidden lg:block ">
         <img src="src/assets/logo.webp" alt="logo" loading="lazy" />
       </div>
-      <div className="w-full lg:w-[60%] bg-[rgba(34,31,31,0.6)]  flex justify-between px-10 lg:px-0 lg:justify-around items-center h-[3.1rem] rounded-[1.8rem] relative">
+      <div className="w-full lg:w-[60%] 2xl:w-[40%] bg-[rgba(34,31,31,0.9)]  flex justify-between px-10 lg:px-0 lg:justify-around items-center h-[3.1rem] rounded-[1.8rem] relative">
         <div className="logo w-[18%] sm:w-[20%] md:w-[15%] lg:hidden ">
           <img src="src/assets/logo.webp" alt="logo" loading="lazy" />
         </div>
@@ -47,7 +47,7 @@ export default function Navbar({ click }) {
           />
         </div>
       </div>
-      <div className="btn w-[20%] hidden lg:block">
+      <div className="btn hidden lg:flex items-center justify-end ">
         <SvgBtn title="Get in Touch" effect={true} link={"#contact-us"} />
       </div>
     </nav>

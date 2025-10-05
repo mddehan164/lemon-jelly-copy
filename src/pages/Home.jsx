@@ -72,6 +72,7 @@ export default function Home() {
                   src="src/assets/lemon.webp"
                   alt="lemon"
                   className="inline-block w-[2.3rem] lg:w-[4.8rem] -mt-2 lg:-mt-5 object-fill lg:scale-y-[0.9] chImg"
+                  loading="lazy"
                 />
               );
             } else {
@@ -107,6 +108,7 @@ export default function Home() {
         src="src/assets/home-bg.gif"
         alt="bg-hero"
         className="w-full object-cover h-full absolute top-0 left-0 -z-10"
+        loading="lazy"
       />
     </div>
   );

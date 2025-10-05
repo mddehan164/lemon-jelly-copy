@@ -15,6 +15,35 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scrollbar width & height */
+::-webkit-scrollbar {
+  width: 5px; /* vertical scrollbar */
+}
+
+/* Track background */
+::-webkit-scrollbar-track {
+  background: #1a1a1a; /* scrollbar track color */
+  border-radius: 10px;
+}
+
+/* Scroll thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #e7d31e, #e4cd03); /* color/gradient */
+  border-radius: 10px;
+}
+
+/* Mobile Navigation Transitions */
+.mobileNav {
+  will-change: transform;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  transition: opacity 0.3s ease;
 }
 
 .jelly {

@@ -14,7 +14,7 @@ export default function App() {
     { name: "Services", link: "#services", id: 2 },
     { name: "Contact Us", link: "#contact-us", id: 4 },
   ];
-
+  console.log(open);
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
@@ -35,65 +35,69 @@ export default function App() {
     };
   }, [open]);
 
-  const handleClick = () => {
-    // setOpen(!open);
-    rot();
-    // alert("hi");
-  };
   const { contextSafe } = useGSAP();
-  const rot = contextSafe(() => {
+  const toggleMenu = contextSafe(() => {
+    setOpen(!open);
     if (!open) {
-      gsap.from(".mobileNav", {
-        x: 1200,
-        duration: 0.8,
-        delay: 0.5,
+      // Opening menu
+      gsap.set(".overlay", { display: "block" });
+      gsap.to(".overlay", { opacity: 1, duration: 0.1 });
+      gsap.fromTo(".mobileNav", { x: "100%" }, { x: 0, duration: 0.1 });
+    } else {
+      // Closing menu
+      gsap.to(".overlay", {
+        opacity: 0,
+        duration: 0.1,
+        onComplete: () => gsap.set(".overlay", { display: "none" }),
+      });
+      gsap.to(".mobileNav", {
+        x: "100%",
+        duration: 0.1,
       });
     }
-    // else {
-    //   gsap.from(".mobileNav", {
-    //     x: 1200,
-    //     duration: 0.8,
-    //     delay: 0.5,
-    //   });
-    // }
-    setOpen(!open);
   });
 
   return (
     <div className="w-full h-screen relative overflow-x-hidden">
-      <div className="bg-white w-full h-full absolute z-50 lg:hidden mobileNav">
-        <div className="flex flex-col mt items-center h-screen  text-lg font-semibold relative  bg-amber-200">
-          <div
-            className="absolute top-5 right-5 cursor-pointer"
-            // onClick={() => setOpen(!open)}
-            onClick={rot}
-          >
-            <CircleX />
-          </div>
-          <hr className="mt-15 mb-10  w-full opacity-20" />
-          {items.map((item) => (
-            <a
-              key={item.id}
-              href={item.link}
-              onClick={() => setOpen(false)}
-              className="w-[70%] text-center text-zinc-700 border-b-1 border-gray-300 py-5"
+      {/* Overlay */}
+      <div
+        className="overlay fixed inset-0 z-40 hidden opacity-0 lg:hidden"
+        onClick={toggleMenu}
+      ></div>
+
+      {/* Mobile Navigation */}
+      <div className="mobileNav fixed top-0 right-0 w-full h-full z-50 lg:hidden translate-x-full">
+        <div className="flex flex-col h-full text-lg font-semibold bg-white shadow-xl">
+          <div className="flex items-center justify-between p-6 border-b">
+            <img src="src/assets/logo.webp" alt="logo" className="w-24" />
+            <button
+              className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
+              onClick={toggleMenu}
             >
-              {item.name}
-            </a>
-          ))}
-          {/* <div onClick={rot} className=" bg-white px-5">
-              Hi
-            </div> */}
+              <CircleX className="w-6 h-6" />
+            </button>
+          </div>
+
+          <div className="flex flex-col py-8">
+            {items.map((item) => (
+              <a
+                key={item.id}
+                href={item.link}
+                onClick={toggleMenu}
+                className="py-4 px-6 text-center text-zinc-700 hover:bg-gray-50 transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
 
-      {!open && (
-        <>
-          <Navbar click={rot} />
-          <Home />
-          <Services />
-        </>
-      )}
+      <>
+        <Navbar click={toggleMenu} />
+        <Home />
+        <Services />
+      </>
     </div>
   );
 }
