@@ -15,9 +15,9 @@ export default function Card({
       } md:h-84 h-60 flex flex-col justify-end gap-2 p-5 relative rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer`}
       onClick={() => setActive(id)}
     >
-      <h className="text-lg sm:text-xl md:4xl xl:text-5xl font-semibold w-[70%]">
+      <h1 className="text-lg sm:text-xl md:4xl xl:text-5xl font-semibold w-[70%]">
         {title || "title"}
-      </h>
+      </h1>
       <p className="text-xs sm:text-base md:text-lg  text-gray-500">
         {description || "des"}
       </p>

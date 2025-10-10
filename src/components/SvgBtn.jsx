@@ -1,12 +1,8 @@
 import { SquareArrowUpRight } from "lucide-react";
 
-export default function SvgBtn({
-  title = "Get in Touch",
-  effect = false,
-  link,
-}) {
+export default function SvgBtn({ title = "Get in Touch", effect = false }) {
   return (
-    <a href={link} className="inline-block w-32 lg:w-48">
+    <div className="inline-block w-32 lg:w-48">
       {/* wrapper to control max width */}
       <svg
         viewBox="0 0 200 60"
@@ -57,6 +53,6 @@ export default function SvgBtn({
           {title}
         </text>
       </svg>
-    </a>
+    </div>
   );
 }

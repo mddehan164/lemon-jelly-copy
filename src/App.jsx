@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import OurWorks from "./pages/OurWorks";
+import Partners from "./pages/Partners";
+import Clients from "./pages/Clients";
 
 export default function App() {
   const [open, setOpen] = useState(false);
@@ -15,7 +17,6 @@ export default function App() {
     { name: "Services", link: "#services", id: 2 },
     { name: "Contact Us", link: "#contact-us", id: 4 },
   ];
-  console.log(open);
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
@@ -99,6 +100,8 @@ export default function App() {
         <Home />
         <Services />
         <OurWorks />
+        <Partners />
+        <Clients />
       </>
     </div>
   );

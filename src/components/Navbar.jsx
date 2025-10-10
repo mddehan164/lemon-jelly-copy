@@ -36,8 +36,9 @@ export default function Navbar({ click }) {
         ))}
 
         <div className="lg:hidden w-44 h-10 flex justify-between items-center gap-3">
-          <SvgShape effect={true} link={"#contact-us"} />
-
+          <a href="#contact-us">
+            <SvgShape effect={true} />
+          </a>
           <JellyBtn
             name={<Menu size={18} onClick={click} className="cursor-pointer" />}
             id={1}
@@ -47,9 +48,9 @@ export default function Navbar({ click }) {
           />
         </div>
       </div>
-      <div className="btn hidden lg:flex items-center justify-end ">
-        <SvgBtn title="Get in Touch" effect={true} link={"#contact-us"} />
-      </div>
+      <a href="#home" className="btn hidden lg:flex items-center justify-end ">
+        <SvgBtn title="Get in Touch" effect={true} />
+      </a>
     </nav>
   );
 }

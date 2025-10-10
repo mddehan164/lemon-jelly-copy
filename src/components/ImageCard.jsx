@@ -4,7 +4,7 @@ export default function ImageCard({ data }) {
   return (
     <a
       className={`bg-white ${
-        data.cls || "col-span-1 2xl:col-span-2"
+        data.cls || "col-span-1 lg:col-span-2"
       } h-[35vw] rounded-lg relative group overflow-hidden bg-gradient-to-t from-black to-transparent`}
       href="#"
     >

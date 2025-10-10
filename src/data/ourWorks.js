@@ -3,13 +3,13 @@ export const cardInfo = [
     title: "limone beberages",
     des: "branding, graphic design, product campaign",
     image: "src/assets/image-card/project-1.webp",
-    cls: "col-span-2 2xl:col-span-3",
+    cls: "col-span-2 lg:col-span-3",
   },
   {
     title: "glow up cosmetics",
     des: "social media, animation, marketing strategy",
     image: "src/assets/image-card/project-2.webp",
-    cls: "col-span-1 2xl:col-span-3",
+    cls: "col-span-1 lg:col-span-3",
   },
   {
     title: "urban beats",

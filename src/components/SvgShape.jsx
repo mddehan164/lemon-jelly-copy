@@ -3,13 +3,12 @@ import { SquareArrowUpRight } from "lucide-react";
 export default function SvgShape({
   effect = false,
   Icon = SquareArrowUpRight,
-  link,
   cls,
   fill = "fill-[#FFE000]",
   stroke,
 }) {
   return (
-    <a href={link} className={`${cls} cursor-pointer  `}>
+    <div className={`${cls} cursor-pointer  `}>
       <svg
         viewBox="0 0 200 60"
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +25,7 @@ export default function SvgShape({
           d="M140,5 L140,38 L157,55 L195,55 L195,22 L178,5 Z"
           fill="url(#gradient3)"
           className={`${
-            effect ? "group-hover:fill-[#000]" : fill
+            effect ? "" : fill
           } transition-colors duration-700 stroke-5 ${
             stroke ? "stroke-white" : ""
           }`}
@@ -40,6 +39,6 @@ export default function SvgShape({
           } transition-colors duration-700`}
         />
       </svg>
-    </a>
+    </div>
   );
 }

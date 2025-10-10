@@ -15,7 +15,7 @@ export default function OurWorks() {
       <h4 className="text-center mt-8 text-xl lg:text-2xl text-gray-300 scale-x-110">
         showcasing our creative expertise and successful projects
       </h4>
-      <div className="grid grid-cols-2 2xl:grid-cols-6 gap-5 md:gap-7 lg:gap-10 items-stretch auto-rows-fr mt-28">
+      <div className="grid grid-cols-2 lg:grid-cols-6 gap-5 md:gap-7 lg:gap-10 items-stretch auto-rows-fr mt-28">
         {cardInfo.map((info, idx) => (
           <ImageCard key={idx} data={info} />
         ))}
