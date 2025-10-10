@@ -118,6 +118,9 @@ html {
 .text-jelly {
   color: #ffe101;
 }
+.text-hover-jelly :hover {
+  color: #ffe101;
+}
 
 .blending {
   mix-blend-mode: difference;

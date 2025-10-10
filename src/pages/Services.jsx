@@ -11,7 +11,7 @@ export default function Services() {
       className="w-full min-h-screen pt-32 md:px-16 px-10 py-28 xl:px-32 2xl:px-44"
     >
       <h1 className="text-center text-6xl font-semibold">
-        <Splitter text="Things we're really good at" cls={"serviceTit"} />
+        <Splitter text="Things we're really good at" cls={"left-split"} />
       </h1>
       <h4 className="text-center mt-8 text-xl text-gray-500">
         Pick your flavor — we'll shake up the strategy and serve it fresh.

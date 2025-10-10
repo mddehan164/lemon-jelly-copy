@@ -6,6 +6,7 @@ export default function SvgShape({
   link,
   cls,
   fill = "fill-[#FFE000]",
+  stroke,
 }) {
   return (
     <a href={link} className={`${cls} cursor-pointer  `}>
@@ -26,7 +27,9 @@ export default function SvgShape({
           fill="url(#gradient3)"
           className={`${
             effect ? "group-hover:fill-[#000]" : fill
-          } transition-colors duration-700 stroke-5 stroke-white`}
+          } transition-colors duration-700 stroke-5 ${
+            stroke ? "stroke-white" : ""
+          }`}
         />
         <Icon
           size={27}

@@ -22,7 +22,7 @@ export default function Card({
         {description || "des"}
       </p>
       <div className="absolute -top-1.5 sm:-top-5 md:-top-8 right-4 md-32 md:w-60">
-        <SvgShape Icon={Icon} />
+        <SvgShape Icon={Icon} stroke={true} />
       </div>
     </div>
   );
