@@ -8,7 +8,7 @@ export default function Partners() {
   return (
     <div
       id="partners"
-      className="w-full min-h-[75vh] pt-36 md:px-16 px-10 py-10 xl:px-32 2xl:px-44 relative"
+      className="w-full min-h-[100vh] lg:min-h-[75vh] pt-36 md:px-16 px-10 py-10 xl:px-32 2xl:px-44 relative"
     >
       <h1 className="text-center text-6xl font-semibold">
         <Splitter text="Partnered with greatness" cls={"left-split"} />

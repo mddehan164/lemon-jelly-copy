@@ -6,9 +6,10 @@ export default function SvgShape({
   cls,
   fill = "fill-[#FFE000]",
   stroke,
+  outline = false,
 }) {
   return (
-    <div className={`${cls} cursor-pointer  `}>
+    <div className={`${cls} cursor-pointer `}>
       <svg
         viewBox="0 0 200 60"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,17 +26,21 @@ export default function SvgShape({
           d="M140,5 L140,38 L157,55 L195,55 L195,22 L178,5 Z"
           fill="url(#gradient3)"
           className={`${
-            effect ? "" : fill
-          } transition-colors duration-700 stroke-5 ${
-            stroke ? "stroke-white" : ""
-          }`}
+            outline ? "group-hover:fill-[#fff]" : fill
+          } transition-colors duration-700 ${
+            outline ? "stroke-2" : "stroke-5"
+          } ${stroke || outline ? "stroke-white" : ""}`}
         />
         <Icon
           size={27}
           x={155}
           y={15}
           className={`${
-            effect ? "group-hover:stroke-[#000]" : "stroke-[#000]"
+            outline
+              ? "group-hover:stroke-[#000]"
+              : effect
+              ? "stroke-[#000]"
+              : "stroke-[#fff]"
           } transition-colors duration-700`}
         />
       </svg>

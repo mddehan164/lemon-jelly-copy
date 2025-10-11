@@ -1,12 +1,18 @@
 @import "tailwindcss";
-@tailwind utilities;
 
 @font-face {
   font-family: qb;
   src: url("./assets/fonts/qb-one-extra-bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: sign;
+  src: url("./assets/fonts/signature-font.ttf") format("truetype");
+}
 .qb {
   font-family: qb;
+}
+.sign {
+  font-family: sign;
 }
 
 body,
