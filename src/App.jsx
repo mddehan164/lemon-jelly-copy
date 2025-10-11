@@ -8,6 +8,7 @@ import gsap from "gsap";
 import OurWorks from "./pages/OurWorks";
 import Partners from "./pages/Partners";
 import Clients from "./pages/Clients";
+import logo from "./assets/logo.webp";
 
 export default function App() {
   const [open, setOpen] = useState(false);
@@ -71,7 +72,7 @@ export default function App() {
       <div className="mobileNav fixed top-0 right-0 w-full h-full z-50 lg:hidden translate-x-full">
         <div className="flex flex-col h-full text-lg font-semibold bg-white shadow-xl">
           <div className="flex items-center justify-between p-6 border-b">
-            <img src="src/assets/logo.webp" alt="logo" className="w-24" />
+            <img src={logo} alt="logo" className="w-24" loading="lazy" />
             <button
               className="p-2 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
               onClick={toggleMenu}

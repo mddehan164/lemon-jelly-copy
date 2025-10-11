@@ -41,6 +41,12 @@ export default function Clients() {
           modules={[Navigation, Pagination, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={3}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            480: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 3 },
+          }}
           loop={true}
           autoplay={{
             delay: 3000,

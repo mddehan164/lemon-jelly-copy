@@ -18,6 +18,7 @@ export default function ClippedImg() {
         className="w-full h-full object-cover clipped-img"
         style={{ clipPath: "url(#myClip)" }}
         alt="clipped image"
+        loading="lazy"
       />
     </div>
   );

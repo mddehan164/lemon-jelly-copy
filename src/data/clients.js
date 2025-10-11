@@ -1,9 +1,13 @@
+import client1 from "../assets/clients/avatar-1.09c7541c.webp";
+import client2 from "../assets/clients/avatar-2.webp";
+import client3 from "../assets/clients/avatar-3.webp";
+
 export const clients = [
   {
     name: "Sophia Moreno",
     position: "Creative Lead",
     company: "Limoné Beverages",
-    image: "src/assets/clients/avatar-1.09c7541c.webp", // you can replace with actual image path
+    image: client1, // you can replace with actual image path
     quote:
       "Lemon Jelly Media understood our brand better than we did. The creative direction was bold, refreshing, and exactly what we needed to stand out.",
   },
@@ -11,7 +15,7 @@ export const clients = [
     name: "Jared Lin",
     position: "Marketing Director",
     company: "ByteTech",
-    image: "src/assets/clients/avatar-2.webp",
+    image: client2,
     quote:
       "Their campaign ideas were not only innovative but also drove real results. Our product launch was a massive success thanks to their strategic execution.",
   },
@@ -19,7 +23,7 @@ export const clients = [
     name: "Amelia Ford",
     position: "Head of Brand",
     company: "GlowUp Cosmetics",
-    image: "src/assets/clients/avatar-3.webp",
+    image: client3,
     quote:
       "They nailed the balance between fun and professional. Our online presence now perfectly matches our audience, and engagement is way up.",
   },
@@ -27,7 +31,7 @@ export const clients = [
     name: "Sophia Moreno",
     position: "Creative Lead",
     company: "Limoné Beverages",
-    image: "src/assets/clients/avatar-1.09c7541c.webp", // you can replace with actual image path
+    image: client1, // you can replace with actual image path
     quote:
       "Lemon Jelly Media understood our brand better than we did. The creative direction was bold, refreshing, and exactly what we needed to stand out.",
   },

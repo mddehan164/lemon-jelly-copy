@@ -3,6 +3,7 @@ import JellyBtn from "./JellyBtn";
 import SvgBtn from "./SvgBtn";
 import { Menu } from "lucide-react";
 import SvgShape from "./SvgShape";
+import logo from "../assets/logo.webp";
 
 const items = [
   { name: "Home", link: "#home", id: 1 },
@@ -16,11 +17,11 @@ export default function Navbar({ click }) {
   return (
     <nav className="w-full h-14 lg:h-20 flex items-center justify-center lg:justify-between px-5 lg:px-24 fixed top-4 lg:top-8 z-40">
       <div className="logo w-[10%] hidden lg:block ">
-        <img src="src/assets/logo.webp" alt="logo" loading="lazy" />
+        <img src={logo} alt="logo" loading="lazy" />
       </div>
       <div className="w-full lg:w-[60%] 2xl:w-[40%] bg-[rgba(34,31,31,0.9)]  flex justify-between px-10 lg:px-0 lg:justify-around items-center h-[3.1rem] rounded-[1.8rem] relative">
         <div className="logo w-[18%] sm:w-[20%] md:w-[15%] lg:hidden ">
-          <img src="src/assets/logo.webp" alt="logo" loading="lazy" />
+          <img src={logo} alt="logo" loading="lazy" />
         </div>
 
         {items.map((item) => (

@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import SvgBtn from "../components/SvgBtn";
 import Splitter from "../components/Splitter";
+import lemon from "../assets/lemon.webp";
+import bg from "../assets/home-bg.gif";
 
 export default function Home() {
   const text1 = Array.from("LEMON".toUpperCase());
@@ -69,7 +71,7 @@ export default function Home() {
               return (
                 <img
                   key={idx}
-                  src="src/assets/lemon.webp"
+                  src={lemon}
                   alt="lemon"
                   className="inline-block w-[2.3rem] lg:w-[4.8rem] -mt-2 lg:-mt-5 object-fill lg:scale-y-[0.9] chImg"
                   loading="lazy"
@@ -105,7 +107,7 @@ export default function Home() {
       </div>
 
       <img
-        src="src/assets/home-bg.gif"
+        src={bg}
         alt="bg-hero"
         className="w-full object-cover h-full absolute top-0 left-0 -z-10"
         loading="lazy"
