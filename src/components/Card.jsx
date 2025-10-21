@@ -10,7 +10,7 @@ export default function Card({
   const isActive = active === id;
   return (
     <div
-      className={`sm:w-[13rem] md:w-xs ${
+      className={`${
         isActive ? "bg-[#FFE000]" : "bg-[rgb(255,255,235)]"
       } md:h-84 h-60 flex flex-col justify-end gap-2 p-5 relative rounded-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer`}
       onClick={() => setActive(id)}
@@ -22,7 +22,7 @@ export default function Card({
         {description || "des"}
       </p>
       <div className="absolute -top-1.5 sm:-top-5 md:-top-8 right-4 md-32 md:w-60">
-        <SvgShape Icon={Icon} stroke={true} />
+        <SvgShape Icon={Icon} stroke={true} effect={true} />
       </div>
     </div>
   );

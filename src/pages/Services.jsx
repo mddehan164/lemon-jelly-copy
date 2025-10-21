@@ -10,13 +10,27 @@ export default function Services() {
       id="services"
       className="w-full min-h-screen pt-32 md:px-16 px-10 py-28 xl:px-32 2xl:px-44"
     >
-      <h1 className="text-center text-6xl font-semibold">
-        <Splitter text="Things we're really good at" cls={"left-split"} />
-      </h1>
-      <h4 className="text-center mt-8 text-xl text-gray-500">
+      <div className="text-center text-2xl lg:text-6xl font-semibold flex flex-wrap justify-center gap-3 lg:gap-5">
+        <h1>
+          <Splitter text="things" cls={"left-split"} />
+        </h1>
+        <h1>
+          <Splitter text="we're" cls={"left-split"} />
+        </h1>
+        <h1>
+          <Splitter text="really" cls={"left-split"} />
+        </h1>
+        <h1>
+          <Splitter text="good" cls={"left-split"} />
+        </h1>
+        <h1>
+          <Splitter text="at" cls={"left-split"} />
+        </h1>
+      </div>
+      <h4 className="text-center mt-2 lg:mt-8 text-base lg:text-xl text-gray-500">
         Pick your flavor — we'll shake up the strategy and serve it fresh.
       </h4>
-      <div className="mt-28 grid grid-cols-2 lg:grid-cols-3 gap-16">
+      <div className="mt-28 grid grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 lg:gap-12">
         {services.map((service) => (
           <Card
             key={service.id}
